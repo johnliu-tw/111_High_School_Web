@@ -32,3 +32,26 @@ function ilike(newsNumber){
 $('.carousel').carousel({
   pause: 'false'
 })
+
+Chart.defaults.font.size = 18;
+var myChart = new Chart(document.getElementById("myChart"), {
+  type: 'polarArea',
+  data: {
+    labels: ["柴燒黑糖口味", "Asia", "Europe", "Latin America", "North America", "柴燒黑糖口味"],
+    datasets: [
+      {
+        backgroundColor: ['rgba(255, 92, 51, 0.5)', "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e95cd"],
+        borderColor: ["rgba(255, 92, 51, 1)", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e95cd"],
+        borderWidth: 3,
+        data: [20,20,20,30,40, 15]
+      }
+    ]
+  },
+  options: {
+    plugins: {
+      legend: {
+        position: 'bottom'
+      }
+    }
+  }
+});
