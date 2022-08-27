@@ -111,3 +111,42 @@ strong{
   top: 20px;
   right: 20px;
 }
+
+.carousel-caption{
+  left: 12%;
+  bottom: 25%;
+}
+
+.carousel-caption h2{
+  text-shadow: rgba(0, 0, 0, 0.5) 3px 3px 7px;
+  font-size: 2.7vw;
+}
+
+.carousel-caption h4{
+  text-shadow: rgba(0, 0, 0, 0.5) 3px 3px 7px;
+  line-height: 42px;
+}
+
+.btn-white{
+  border: solid 3px #fff;
+  color:#fff;
+  padding: 7px 12px;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: .5s;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.btn-white:hover{
+  border: solid 3px #fff;
+  color:#1cbea1;
+  background-color: #fff;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.tt{
+  padding: 17px 0px;
+  max-width: 700px;
+}

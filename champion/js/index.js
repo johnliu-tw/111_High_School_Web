@@ -28,3 +28,7 @@ function ilike(newsNumber){
 
   likeMap[newsNumber] = !likeMap[newsNumber]; // true <=> false
 }
+
+$('.carousel').carousel({
+  pause: 'false'
+})
