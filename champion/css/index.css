@@ -1,0 +1,42 @@
+body{
+  height: 1500px;
+}
+
+.page1{
+  background-image: url('../images/about_bg.jpg');
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.inshadow .shadow_o, .inshadow .shadow_c{
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+  font-size: 6vw;
+  letter-spacing: 15px;
+  font-weight: bold;
+  color: transparent;
+  -webkit-background-clip: text;
+} 
+
+.shadow_o{
+  background-color: #ff5c33;
+}
+
+.shadow_c{
+  background-color: #1cbea1;
+}
+
+.line{
+  writing-mode: vertical-lr;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.text-width{
+  padding-bottom: 60px;
+}
+
+.lh{
+  line-height: 32px;
+}
