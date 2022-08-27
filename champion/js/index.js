@@ -37,13 +37,15 @@ Chart.defaults.font.size = 18;
 var myChart = new Chart(document.getElementById("myChart"), {
   type: 'polarArea',
   data: {
-    labels: ["柴燒黑糖口味", "Asia", "Europe", "Latin America", "North America", "柴燒黑糖口味"],
+    labels: ["柴燒黑糖", "馬告胡椒", "四川麻辣", "木瓜牛奶", "雙倍起司", "經典原味"],
     datasets: [
       {
-        backgroundColor: ['rgba(255, 92, 51, 0.5)', "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e95cd"],
-        borderColor: ["rgba(255, 92, 51, 1)", "#8e5ea2","#3cba9f","#e8c3b9","#c45850", "#3e95cd"],
+        backgroundColor: ['rgba(255, 92, 51, 0.5)', "rgba(255, 92, 0, 0.5)","rgba(255, 0, 50, 0.5)",
+                          "rgba(28, 190, 161, 0.5)","rgba(28, 190, 0, 0.5)", "rgba(28, 72, 161, 0.5)"],
+        borderColor: ["rgba(255, 92, 51, 1)", "rgba(255, 92, 0, 1)","rgba(255, 0, 50, 1)",
+                      "rgba(28, 190, 161, 1)","rgba(28, 190, 0, 1)", "rgba(28, 72, 161, 1)"],
         borderWidth: 3,
-        data: [20,20,20,30,40, 15]
+        data: [20,20,20,30,40,15]
       }
     ]
   },
