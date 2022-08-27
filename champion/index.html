@@ -178,6 +178,52 @@
             </div>
         </section>
     
+        <section class="page4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 wow animate__fadeInLeft mt-4">
+                        <div class="inshadow">
+                            <span class="shadow_o">服務</span>
+                            <span class="shadow_c">中心</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-12 wow animate__fadeInLeft"  data-wow-delay="1s">
+                        <h1>顧客諮詢...  <span class="glyphicon glyphicon-send"></span> </h1>
+                        <h5>歡迎大家在這邊留下相關的建議與問題
+                            供我們團隊作為下次改善參考喔！ </h5>
+                        <form action="">
+                            <h4>暱稱</h4>
+                            <input type="text" class="form-control" id="cname" required>
+                            <h4>信箱</h4>
+                            <input type="email" class="form-control" id="cemail" required>
+                            <h4>暱稱</h4>
+                            <textarea name="" id="ctext" cols="30" rows="10" required></textarea>
+                            <div>
+                                <button type="submit" class="btn-white" onclick="chat()">送出</button>
+                                <button type="reset" class="btn-white">重設</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-6 col-12 wow animate__fadeInRight"  data-wow-delay="1s">
+                        <div class="chat-section">
+                            <h1>問題回饋區</h1>
+                            <h3>共有 <span id="chat_c">x</span> 筆資料 </h3>
+                            <ul id="chat_to">
+                                <li class="chat-box">
+                                    <b class="chat-tit">
+                                        <span>示範姓名</span>
+                                        <span>示範 Email A@A.C*********</span>
+                                    </b>
+                                    <box>示範訊息</box>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
         <!-- modal 區--->
         <div class="modal" id="n1">
             <div class="modal-dialog">
