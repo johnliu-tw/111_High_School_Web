@@ -49,6 +49,10 @@ strong{
   color: #ff5c33;
 }
 
+.orange{
+  color: #ff5c33;
+}
+
 .page3{
   background-image: url('../images/news_bg.jpg');
   background-position: top;
@@ -92,4 +96,18 @@ strong{
   background-color: #ff5c33;
   transition: .5s;
   cursor: pointer;
+}
+
+.mbox{
+  padding: 0;
+  margin: 0;
+  border-top: 5px solid #1cbea1;
+  border-bottom: 5px solid #1cbea1;
+}
+
+.mbox .close{
+  position: absolute;
+  color: #fff;
+  top: 20px;
+  right: 20px;
 }
