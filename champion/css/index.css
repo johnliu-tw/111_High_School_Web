@@ -160,6 +160,10 @@ strong{
 .chat-section{
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
+  padding: 42px;
+  min-height: 600px;
+  margin-bottom: 30px;
+  border: solid 4px #e1e1e1;
 }
 
 .chat-box{
@@ -171,9 +175,30 @@ font-size: 1.2em;
   color: teal;
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
 }
 
 box{
   display: block;
   border-left: 5px solid teal;
+}
+
+.page4{
+  background-image: url('../images/board_bg.jpg');
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+.tas{
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+.white{
+  color: #fff
+}
+
+.tomato{
+  color: tomato;
 }
