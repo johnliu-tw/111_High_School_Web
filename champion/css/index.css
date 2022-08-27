@@ -17,6 +17,7 @@ body{
   font-weight: bold;
   color: transparent;
   -webkit-background-clip: text;
+  margin-top: 100px;
 } 
 
 .shadow_o{
@@ -31,6 +32,9 @@ body{
   writing-mode: vertical-lr;
   font-size: 40px;
   font-weight: bold;
+  margin: 0px auto;
+  padding-bottom: 20px;
+  padding-top: 30px;
 }
 
 .text-width{
@@ -39,4 +43,8 @@ body{
 
 .lh{
   line-height: 32px;
+}
+
+strong{
+  color: #ff5c33;
 }
