@@ -203,3 +203,30 @@ $('#shop_close').on('click', function(){
   $('#cart_all').text(0)
   $('.shop_item h5').hide()
 })
+
+// $('.r_body').delay(5000).fadeOut('slow');
+$('#robot').click(function(){
+    sleep();
+});
+
+var robotClose = true;
+function sleep(){
+    if(robotClose){
+      $('.r_body').css({opacity:1,height:350});
+      $('#robot').addClass('animate__animated animate__rubberBand').bind('animationend',function(){
+        $(this).removeClass('animate__animated animate__rubberBand');
+      });
+      $('#robot').removeClass('robot_pic')
+                .addClass('glyphicon glyphicon-remove');
+      $('.r_body').show('slow')
+    }
+    else{
+      $('#robot').addClass('animate__animated animate__rubberBand').bind('animationend',function(){
+        $(this).removeClass('animate__animated animate__rubberBand');
+      });
+      $('#robot').removeClass('glyphicon glyphicon-remove')
+                .addClass('robot_pic');
+      $('.r_body').hide('slow')
+    }
+    robotClose=!robotClose;
+};
