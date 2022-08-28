@@ -202,3 +202,15 @@ box{
 .tomato{
   color: tomato;
 }
+
+.shop_tb{
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.am{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
