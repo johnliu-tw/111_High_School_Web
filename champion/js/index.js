@@ -134,6 +134,7 @@ $('.shop_min').on('click', function(){
     newNumber = 0
   }
   $numElement.val(newNumber)
+  calculateSum()
 })
 
 $('.shop_add').on('click', function(){
@@ -144,4 +145,37 @@ $('.shop_add').on('click', function(){
   var $numElement = $(this).prev()
   var newNumber = parseInt($numElement.val()) + 1
   $numElement.val(newNumber)
+  calculateSum()
 })
+
+$('.shop_num').on('change', function(){
+  calculateSum()
+})
+
+function calculateSum(){
+  var nowM = 0;
+  for (var index = 0; index < 4; index++) {
+    nowM = nowM + parseInt($('.shop_num').eq(index).val()) * 150
+  }
+
+  nowM = nowM + parseInt($('.shop_num').eq(4).val()) * 120
+  nowM = nowM + parseInt($('.shop_num').eq(5).val()) * 100
+
+  $('#cart_sum').text(nowM)
+  $('#cart_all').text(nowM + 60)
+
+  $('#cart_sum, #cart_all').addClass('animate__animated animate__rubberBand')
+  .bind('animationend', function(){
+    $(this).removeClass('animate__animated animate__rubberBand')
+  })
+
+  for (let index = 0; index < 6; index++) {
+    var productNumber = $('.shop_num').eq(index).val()*1
+    $('.shop_no').eq(index).text(productNumber)
+    if(productNumber > 0){
+      $('.shop_item h5').eq(index).show()
+    } else{
+      $('.shop_item h5').eq(index).hide()
+    }
+  }
+}
