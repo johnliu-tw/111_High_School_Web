@@ -284,9 +284,23 @@ box{
   background-position: center;
   background-repeat: no-repeat;
   margin: 2rem;
+  padding: 1vw 6vw;
+  transition: 0.5s;
 }
 
-.nav-link:hover{
+.nav-link, .gly-link{
+  color: #666;
+  transition: 0.5s;
+  font-weight: bold;
+  padding: 0px 0.5rem;
+}
+
+.nav-link:hover, .gly-link:hover{
   opacity: 1;
   transition: 0.5s;
+}
+
+.gly-link {
+  padding: 0px 17px;
+  opacity: 0.8;
 }
