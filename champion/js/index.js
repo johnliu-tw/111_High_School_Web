@@ -230,3 +230,67 @@ function sleep(){
     }
     robotClose=!robotClose;
 };
+
+$('.btn-send').on('click', function(s){
+  var buttonText = $(this).text()
+  $('#rsay_to').append(`
+      <div class="row rr_div">
+        <div class="talk">${buttonText}<br>${getDate()}</div>
+        <div class="r_p r_pic">
+          <span class="glyphicon glyphicon-user"></span>
+        </div>
+      </div>`);
+  answer(buttonText);
+});
+
+function getDate(){
+  var today = new Date();
+  var timeText = today.getHours()<13 ? '上午' : '下午'
+
+  return `${timeText}${today.getHours()}:${today.getMinutes()}`;
+};
+
+function answer(buttonText){
+  setTimeout(function(){
+      if(buttonText == '訂購'){
+        var replyText = '前往線上訂購，選擇您所喜愛的口味並下訂！'
+      } else if(buttonText == '推薦'){
+        var replyText = '藉由熱銷推薦整理，查看近期最暢銷項目Top.1！'
+      } else if(buttonText == '服務'){
+        var replyText = '若有問題請至服務中心留言，我們將迅速為您處理！'
+      } else{
+        var replyText = '感謝您提供建議與問題，稍後將有專人為您服務！'
+      }
+
+      $('#rsay_to').append(`
+          <div class="row r_div">
+            <img src="images/robot.png" class="r_pic">
+            <div class="r_hi">${replyText}<br>${getDate()}</div>
+          </div>`
+      );
+      var target = $('#order').offset().top-50
+      $('html,body').animate({
+          scrollTop: target
+      },500)
+
+      var element=document.getElementById('rsay_to')
+      element.scrollTop=element.scrollHeight
+      element.scrollLeft=element.scrollLeft
+  }, 500);
+};
+
+function keyin(event){
+  if(event.which==13){ // 確認是否是按 enter 鍵
+
+      $('#rsay_to').append(
+        `<div class="row rr_div">
+          <div class="talk">${$('#r_say').val()}<br>${getDate()}</div>
+          <div class="r_p r_pic">
+            <span class="glyphicon glyphicon-user"></span>
+          </div>
+         </div>`
+      );
+      $('#r_say').val("");
+      answer('');
+  };
+};
