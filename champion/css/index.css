@@ -275,3 +275,18 @@ box{
 .fw{
   font-weight: bold;
 }
+
+.navbar{
+  border-radius: 50px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+  background-image: url('../images/logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 2rem;
+}
+
+.nav-link:hover{
+  opacity: 1;
+  transition: 0.5s;
+}
