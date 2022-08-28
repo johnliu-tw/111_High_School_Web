@@ -116,3 +116,32 @@ $('a').on('click', function(){
     scrollTop: scrollTo
   }, 500)
 })
+
+$('.o_img').hover(function(){
+  $(this).addClass('animate__animated animate__flip').bind('animationend', function(){
+    $(this).removeClass('animate__animated animate__flip')
+  })
+})
+
+$('.shop_min').on('click', function(){
+  $(this).addClass('animate__animated animate__rubberBand').bind('animationend', function(){
+    $(this).removeClass('animate__animated animate__rubberBand')
+  })
+
+  var $numElement = $(this).next()
+  var newNumber = parseInt($numElement.val()) - 1
+  if(newNumber <= 0){
+    newNumber = 0
+  }
+  $numElement.val(newNumber)
+})
+
+$('.shop_add').on('click', function(){
+  $(this).addClass('animate__animated animate__rubberBand').bind('animationend', function(){
+    $(this).removeClass('animate__animated animate__rubberBand')
+  })
+
+  var $numElement = $(this).prev()
+  var newNumber = parseInt($numElement.val()) + 1
+  $numElement.val(newNumber)
+})
