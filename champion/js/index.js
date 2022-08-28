@@ -179,3 +179,27 @@ function calculateSum(){
     }
   }
 }
+
+$('#shop_close').on('click', function(){
+  for(var i = 0; i< 6; i++){
+    var currentNumber = myChart.data.datasets[0].data[i]
+    var newNumber = parseInt($('.shop_num').eq(i).val())
+    myChart.data.datasets[0].data[i] = currentNumber + newNumber
+  }
+
+  var position = $('#report').offset().top
+  $('html, body').animate(
+    { scrollTop: position }, 
+    500,
+    function(){
+      // 滑完以後執行
+      myChart.update()
+    }
+  )
+
+  $('.shop_no').text(0)
+  $('.shop_num').val(0)
+  $('#cart_sum').text(0)
+  $('#cart_all').text(0)
+  $('.shop_item h5').hide()
+})
