@@ -77,9 +77,37 @@ function chat(){
       $('#ctext').val('')
       localStorage.chatData = chatData
       alert('資料已送入後台紀錄')
+      showReport()
     }
   }
 }
+
+showReport()
+function showReport(){
+   var chatData = localStorage.chatData
+   if(chatData != null){
+    var messages = chatData.split('||')
+    $('#chat_to').html('')
+    for (var index = 0; index < messages.length; index++) {
+      var message = messages[index].split('&&');
+      if(messages[index] != ''){
+        var messageHtml = `
+        <li class="chat-box">
+            <b class="chat-tit">
+                <span>${message[0]}</span>
+                <span>${message[1].substr(0, 5)}*********</span>
+            </b>
+            <box>${message[2]}</box>
+        </li>
+        `
+
+        $('#chat_to').append(messageHtml)
+      }
+    }
+    $('#chat_c').html(messages.length)
+   }
+}
+
 
 $('a').on('click', function(){
   var target = $(this).attr('href') // #board
