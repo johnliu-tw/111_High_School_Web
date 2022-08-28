@@ -57,3 +57,34 @@ var myChart = new Chart(document.getElementById("myChart"), {
     }
   }
 });
+
+function chat(){
+  var cname = $('#cname').val()
+  var cemail = $('#cemail').val()
+  var ctext = $('#ctext').val()
+  if(cemail.indexOf('@') > 0){
+    var data = `${cname}&&${cemail}&&${ctext}`
+    var chatData = localStorage.chatData
+    if(cname != '' && ctext != ''){
+      if(chatData == null){ // 是否為第一則留言
+        chatData = data
+      } else {
+        chatData = `${chatData}||${data}`
+      }
+      
+      $('#cname').val('')
+      $('#cemail').val('')
+      $('#ctext').val('')
+      localStorage.chatData = chatData
+      alert('資料已送入後台紀錄')
+    }
+  }
+}
+
+$('a').on('click', function(){
+  var target = $(this).attr('href') // #board
+  var scrollTo = $(target).offset().top
+  $('html, body').animate({
+    scrollTop: scrollTo
+  }, 500)
+})
